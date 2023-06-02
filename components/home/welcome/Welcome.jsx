@@ -1,13 +1,34 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import {useState}from "react"
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Image,
+  FlatList
+} from "react-native"
+import { useRouter } from "expo-router"
+import {icons,Sizes} from "../../../constants"
+
 
 import styles from './welcome.style'
 
 const Welcome = () => {
+ // const router=useRouter();
+  
   return (
     <View>
-      <Text>Welcome</Text>
-    </View>
+      <View style={styles.container}>
+        <Text style = {styles.userName}>Hello Chad</Text>
+        <Text style={styles.welcomeMessage}>Find your prefect job</Text>
+        </View>
+        <View style={styles.searchContainer}>
+          <View style={styles.searchWrapper}>
+            <TextInput/>
+          </View>
+        </View>
+       
+      </View>
   )
 }
 
